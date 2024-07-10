@@ -27,3 +27,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+KurulumDosyalari
+selenium-java-4.22.0
+chromedriver.exe
+.gitignore

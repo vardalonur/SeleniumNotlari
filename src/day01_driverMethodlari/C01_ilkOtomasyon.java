@@ -1,13 +1,14 @@
 package day01_driverMethodlari;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class C01_ilkOtomasyon {
 
     public static void main(String[] args) throws InterruptedException {
 
-                /*
+          /*
             kurulum dosyalarini proje altina kopyalamak
             selenium ve chromedriver'i projeye eklemek icin yeterli degildir
 
@@ -17,7 +18,7 @@ public class C01_ilkOtomasyon {
 
             chromedriver.exe ise
             her class'da WebDriver objesi olusturulurken kullanilir
-         */
+          */
 
         /*
             Selenium bizim istedigimiz tum otomasyonlari
@@ -30,7 +31,9 @@ public class C01_ilkOtomasyon {
 
         System.setProperty("Webdriver.chrome.driver","KurulumDosyalari/chromedriver.exe");
 
-        WebDriver driver = new ChromeDriver();
+
+       WebDriver driver = new ChromeDriver();
+
         //WebDriver driver2 = new ChromeDriver(); //Oluşturacağımız yeni objeler farklı pencereler olarak çalışacaktır.
         //WebDriver driver3 = new ChromeDriver();
 
@@ -41,12 +44,20 @@ public class C01_ilkOtomasyon {
         //driver.get("http://testotomasyonu.com"); //gider
         driver.get("https://www.testotomasyonu.com"); //gider
         //başında https:// ya da http:// olmalı
+        //driver.switchTo().newWindow(WindowType.TAB);
 
-        Thread.sleep(3000); //throws ile not edilmediği sürece "InterruptedException" fırlatacaktır.
+        //driver.get("https://www.google.com/");
+
+        //System.out.println(driver.getWindowHandles());
+
+
+
+
+        //Thread.sleep(3000); //throws ile not edilmediği sürece "InterruptedException" fırlatacaktır.
 
         //driver.close();
         //driver oluşturulurken açılan pencereyi kapatır.
-        driver.quit();
+        //driver.quit();
         //driver çalıştığı müddetçe açılan tüm pencereleri kapatır.
     }
 }
